@@ -1,0 +1,2 @@
+$HOME/compose/healthchecks
+$HOME/appdata/healthchecks
