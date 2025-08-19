@@ -1,0 +1,1 @@
+$HOME/appdata/memos/.thumbnail_cache

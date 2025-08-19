@@ -1,0 +1,2 @@
+$HOME/compose/memos
+$HOME/appdata/memos
