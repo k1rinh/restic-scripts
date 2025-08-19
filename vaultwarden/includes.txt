@@ -1,0 +1,2 @@
+$HOME/compose/vaultwarden
+$HOME/appdata/vaultwarden

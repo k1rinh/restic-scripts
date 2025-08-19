@@ -1,0 +1,2 @@
+$HOME/appdata/vaultwarden/tmp
+$HOME/appdata/vaultwarden/icon_cache
