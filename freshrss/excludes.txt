@@ -1,0 +1,20 @@
+# lscr.io/linuxserver/freshrss:latest
+
+*
+!www
+www/*
+!www/freshrss
+www/freshrss/*
+!www/freshrss/data
+www/freshrss/data/*
+
+# - global config file
+!www/freshrss/data/config.php
+
+# - users' config file and data
+!www/freshrss/data/users
+www/freshrss/data/users/*
+!www/freshrss/data/users/$USERNAME
+www/freshrss/data/users/$USERNAME/*
+!www/freshrss/data/users/$USERNAME/config.php
+!www/freshrss/data/users/$USERNAME/db.sqlite
