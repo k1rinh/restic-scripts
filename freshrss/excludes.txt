@@ -1,20 +1,23 @@
 # lscr.io/linuxserver/freshrss:latest
 
-*
-!www
-www/*
-!www/freshrss
-www/freshrss/*
-!www/freshrss/data
-www/freshrss/data/*
+!$HOME/appdata/freshrss
+$HOME/appdata/freshrss/*
+!$HOME/appdata/freshrss/www
+$HOME/appdata/freshrss/www/*
+!$HOME/appdata/freshrss/www/freshrss
+$HOME/appdata/freshrss/www/freshrss/*
+!$HOME/appdata/freshrss/www/freshrss/data
+$HOME/appdata/freshrss/www/freshrss/data/*
 
 # - global config file
-!www/freshrss/data/config.php
+!$HOME/appdata/freshrss/www/freshrss/data/config.php
 
 # - users' config file and data
-!www/freshrss/data/users
-www/freshrss/data/users/*
-!www/freshrss/data/users/$USERNAME
-www/freshrss/data/users/$USERNAME/*
-!www/freshrss/data/users/$USERNAME/config.php
-!www/freshrss/data/users/$USERNAME/db.sqlite
+!$HOME/appdata/freshrss/www/freshrss/data/users
+$HOME/appdata/freshrss/www/freshrss/data/users/*
+
+#   - $USER1
+!$HOME/appdata/freshrss/www/freshrss/data/users/$USER1
+$HOME/appdata/freshrss/www/freshrss/data/users/$USER1/*
+!$HOME/appdata/freshrss/www/freshrss/data/users/$USER1/config.php
+!$HOME/appdata/freshrss/www/freshrss/data/users/$USER1/db.sqlite
