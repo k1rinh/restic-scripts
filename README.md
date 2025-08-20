@@ -37,6 +37,8 @@ restic cat config
 cd umami
 # 手动运行一次备份脚本
 bash ./backup.sh
+# 查看备份是否如预期
+restic ls latest
 ```
 
 #### 4. 创建计划任务
