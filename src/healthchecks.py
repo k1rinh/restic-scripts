@@ -8,7 +8,11 @@
 import requests
 from tabulate import tabulate
 
-from .config import HC_PROJECT_READ_WRITE_KEY, HC_URL
+from .config import (
+    HC_PROJECT_READ_WRITE_KEY,
+    HC_URL,
+    TIMEZONE,
+)
 
 # TODO:
 # - [ ] 使用 try-expect 提高可靠性和捕获错误
@@ -43,7 +47,7 @@ def create_a_new_check(
     tags="",
     desc="",
     grace=300,
-    tz="Asia/Shanghai",
+    tz=TIMEZONE,
 ):
     response = requests.post(
         url=f"{HC_URL}/api/v3/checks/",
