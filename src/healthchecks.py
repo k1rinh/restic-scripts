@@ -1,6 +1,6 @@
 # TODO:
 # - [x] 与 HealthChecks API 进行交互。
-# - [x] 创建 Checks 并获取 Ping URL。
+# - [x] 创建 Check 并获取 Ping URL。
 # - [x] 列出当前 Host 下的所有 Checks 的时间点。
 
 # Reference:
@@ -21,6 +21,15 @@ def list_existing_checks(tag=""):
     if tag:
         HC_API_URL += f"?tag={tag}"
 
+    response = requests.get(
+        url=HC_API_URL,
+        headers={"X-Api-Key": HC_PROJECT_READ_WRITE_KEY},
+    )
+    return response.json()
+
+
+def get_a_single_check(uuid):
+    HC_API_URL = f"{HC_URL}/api/v3/checks/{uuid}"
     response = requests.get(
         url=HC_API_URL,
         headers={"X-Api-Key": HC_PROJECT_READ_WRITE_KEY},
@@ -49,6 +58,15 @@ def create_a_new_check(
         },
     )
     return response.json()
+
+
+def get_a_single_check_pretty(
+    uuid, headers=["name", "tags", "schedule", "grace", "tz", "uuid"]
+):
+    check = get_a_single_check(uuid=uuid)
+    return tabulate(
+        [[check.get(key) for key in headers]], headers=headers, tablefmt="grid"
+    )
 
 
 def list_existing_checks_pretty(
