@@ -52,7 +52,9 @@ sed -i 's|https://hc-ping.com/your-uuid-here|https://hc-ping.com/your-uuid-here2
 ```shell
 # 移动 Systemd Unit 文件
 mkdir -p ~/.config/systemd/user
-cp restic-* ~/.config/systemd/user/
+# 采用软链接而不是复制，方便统一管理
+# cp restic-* ~/.config/systemd/user/
+ln -sf ~/.config/restic/umami/restic-* ~/.config/systemd/user/
 systemctl --user daemon-reload
 # 手动运行一次
 systemctl --user start restic-umami-backup.service

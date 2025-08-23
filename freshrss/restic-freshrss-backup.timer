@@ -2,7 +2,7 @@
 Description=Run freshrss backup daily at 22:10
 
 [Timer]
-OnCalendar=*-*-* 22:10:00
+OnCalendar=*-*-* 22:10:00 Asia/Shanghai
 Persistent=true
 
 [Install]
