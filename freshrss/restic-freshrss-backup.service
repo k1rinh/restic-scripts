@@ -7,6 +7,3 @@ WorkingDirectory=%h/.config/restic/freshrss
 ExecStartPre=-curl -sS -m 10 --retry 5 https://hc-ping.com/your-uuid-here/start
 ExecStart=/bin/bash ./backup.sh
 ExecStartPost=curl -sS -m 10 --retry 5 https://hc-ping.com/your-uuid-here/${EXIT_STATUS}
-
-[Install]
-WantedBy=multi-user.target
