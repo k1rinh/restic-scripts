@@ -1,4 +1,6 @@
 # lscr.io/linuxserver/freshrss:latest
+# sed -i "s|$HOME|/path/to/home|g" excludes.txt
+# sed -i "s|$USER1|username|g" excludes.txt
 
 !$HOME/appdata/freshrss
 $HOME/appdata/freshrss/*
@@ -21,3 +23,6 @@ $HOME/appdata/freshrss/www/freshrss/data/users/*
 $HOME/appdata/freshrss/www/freshrss/data/users/$USER1/*
 !$HOME/appdata/freshrss/www/freshrss/data/users/$USER1/config.php
 !$HOME/appdata/freshrss/www/freshrss/data/users/$USER1/db.sqlite
+
+# extensions
+!$HOME/appdata/freshrss/www/freshrss/extensions
